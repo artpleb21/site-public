@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+  const mediaContainer = document.getElementById('mediaContainer');
   const title = document.getElementById('title');
   const artist = document.getElementById('artist');
 
@@ -16,46 +17,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // ... add as many videos as you want, each with a URL and a title
   ];
 
-  const mediaContainer = document.getElementById('mediaContainer');
-
-
   function randomArt() {
     const randomIndex = Math.floor(Math.random() * media.length);
-    const selectedItem = media[randomIndex];
-   // const mediaType = selectedMedia.type;
+    const randomMedia = media[randomIndex];
+    const mediaType = randomMedia.type;
 
     // Clear previous media
-    //mediaContainer.innerHTML = '';
+    mediaContainer.innerHTML = '';
     
-/*
-    if (selectedItem.type === 'video') {
-      const videoElement = document.createElement('video');
-      videoElement.src = selectedItem.url;
-      videoElement.controls = true;
-      mediaContainer.appendChild(videoElement);
-
-
+    if (mediaType === 'video') {
+      const videoPlayer = document.createElement('video');
+      videoPlayer.src = randomMedia.url;
+      videoPlayer.controls = true;
+      videoPlayer.loop = true;
+      mediaContainer.appendChild(videoPlayer);
     } else if (mediaType === 'image') {
       const img = document.createElement('img');
       img.src = randomMedia.url;
       img.alt = randomMedia.title;
       mediaContainer.appendChild(img);
-    } 
-    
-    
-      const videoPlayer = document.createElement('video');
-      videoPlayer.src = 'https://ipfs.pixura.io/ipfs/QmaS4srPXEkBfHFpj2SyKw2YRppcrCEHQe14VkkAriAezw/TheTerminal.mp4';
-      mediaContainer.appendChild(videoPlayer);
-    
+    }
 
-
-  */  
-    const img = document.createElement('img');
-    img.src = 'https://ipfs.pixura.io/ipfs/Qmf6ctMD6eoyAhTwKE3yJjP3FpUhD42wFsgab1EqRKbAyu/AFTERLIFE19201080.gif';
-    mediaContainer.appendChild(img); 
-
-    title.textContent = selectedItem.title;
-    artist.textContent = selectedItem.artist;
+    title.textContent = randomMedia.title;
+    artist.textContent = randomMedia.artist;
   }
 
   randomArt();

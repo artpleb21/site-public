@@ -1,16 +1,75 @@
+
+
 body {
   font-family: 'Georgia', serif;
   background-color: #121212;
   color: #EAEAEA;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0;
-        }
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #EAEAEA;
+  border-color: #EAEAEA;
+}
+
+body.light-mode {
+  background-color: #EAEAEA;
+  color: #121212;
+  border-color: #121212;
+}
+
+wrapper {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+
+header {
+  text-align: left;
+  margin-left: 0px; /* This can be adjusted based on your preference */
+  width: 100%;
+  position: sticky;
+  top: 0vh;
+  height: 5rem;
+  border-bottom: 1px solid;
+  font-size: small;
+
+}
+
+footer {
+  width: 100%;
+/*  text-align: right; /* Align the footer content to the right */ 
+  text-align: center; /* Align the footer content to the right */ 
+  justify-content: center;
+  text-justify: center;
+  margin-left: auto; /* Push the footer to the right side */
+  position: sticky;
+  bottom: 0vh;
+  height: 2rem;
+  border-top: 1px solid;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+  border-bottom: 1px solid;
+
+  min-height: 1rem;
+  max-height: 1rem;
+
+}
+
+ftext {
+  text-align: right; /* Align the footer content to the right */
+  margin-left: auto; /* Push the footer to the right side */
+}
 
 h1 {
-  padding: 0px;
   text-indent: 20px;
+  text-size-adjust: ;
   text-transform: uppercase;
   line-height: normal;
 }
@@ -18,96 +77,69 @@ h1 {
 h2 {
   font-size: normal;
   text-indent: 20px;
-
-  padding: 0px;
   font-style: italic;
     line-height: normal;
+}
+/* Middle Section - Main Page */
+
+main {
+    flex: 0;
+    display: flex;
+    align-items: center; /* Vertically center everything */
+    align-content: start;
+    width: 100%;
+    position: sticky;
+    top: 5rem;
+    bottom: 2rem;
+}
+
+.artistLabel {
+    flex: 1; /* This will ensure that the labels will try to grow, but we'll limit their growth with max-width */
+    display: flex; /* Use flex to center the content vertically */
+    min-width: 10%;
+    padding: .5rem;
+    
+    text-align: center; /* Horizontally center the text */
+    font-size: 1rem; /* Increase the font size for visibility */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+}
+
+.titleLabel {
+    flex: 1; /* This will ensure that the labels will try to grow, but we'll limit their growth with max-width */
+    display: flex; /* Use flex to center the content vertically */
+    min-width: 10%;
+    padding: .5rem;
+    font-style: italic;
+    
+    text-align: center; /* Horizontally center the text */
+    font-size: 1rem; /* Increase the font size for visibility */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+}
+
+video, img {
+    flex: 1; /* Allow the media container to grow more than the labels */
+    max-height: 80vh;
+    max-width: 80vw;
+        padding: .5rem;
 
 }
 
-.wrapper {
-  min-height: 100%;
-  max-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  padding: 0px;
+/* Middle Section - About Page */
+
+
+/* Effects for footer mostly*/
+a {
+    color: #66FCF1;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.container {
-  display: flex;
-  margin: 0px auto;
-  text-align: left;
-  align-items: center;
-  justify-items: center;
-  max-height: 60%;
-  justify-content: center; /* Horizontally center */
-  max-height: 60vh;
+a:hover {
+    text-decoration: underline;
 }
 
-.container>* {
-  margin: 0 50px;
-  flex: 1;
-  text-align: left;
-  align-items: center;
-  justify-items: center;
-  max-height: 60vh;
-  object-fit: contain;
+.retro-effect {
+  filter: brightness(80%) sepia(70%) hue-rotate(-50deg) saturate(700%) contrast(0.8);
 }
-
-.video-container {
-
-}
-
-.video-title {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 20%;
-
-}
-
-.video-artist {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 20%;
-
-}
-
-#videoPlayer {
-  flex: 0 0 auto; /* Do not grow, do not shrink, stay at initial size */
-}
-
-  .middle {
-            display: flex;
-            justify-content: center; /* Horizontally center */
-            align-items: center;     /* Vertically center */
-            max-height: 60vh;
-
-}
-
-        .middle video {
-            align-content: center;
-            max-width: 100%;
-            max-height: 60vh;
-            display: flex;
-            justify-content: center;
-        }
-                .footer {
-            align-self: self-end;
-            display: initial;
-            justify-content: right;
-            align-content: center;
-            text-align: right;
-            border-top: 1px solid #EAEAEA;
-            border-bottom: 1px solid #EAEAEA;
-
-        }
-        .retro-effect {
-            filter: brightness(80%) sepia(70%) hue-rotate(-50deg) saturate(700%) contrast(0.8);
-        }
-
