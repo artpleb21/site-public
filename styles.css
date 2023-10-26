@@ -91,6 +91,31 @@ main {
     bottom: 2rem;
 }
 
+mainAbout {
+    flex: 0;
+    display: flex;
+    align-items: center; /* Vertically center everything */
+    align-content: start;
+    width: 100%;
+    position: sticky;
+    top: 5rem;
+    bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-inline: 2rem;
+}
+
+.aboutText {    
+    text-align: center; /* Horizontally center the text */
+    font-size: 1rem; /* Increase the font size for visibility */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+}
+
+
 .artistLabel {
     flex: 1; /* This will ensure that the labels will try to grow, but we'll limit their growth with max-width */
     display: flex; /* Use flex to center the content vertically */

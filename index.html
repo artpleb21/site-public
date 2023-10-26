@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Pleb</title>
+    <script>
+        function loadStylesheet() {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = window.innerWidth <= 800 ? "mobile-styles.css" : "styles.css";
+            document.head.appendChild(link);
+        }
+    </script>
     <style>
-
+        <!-- Add any internal styles here -->
     </style>
 </head>
-<body>
+<body onload="loadStylesheet()">
     <wrapper>
-    <!-- Header Section -->
-    <header>
-        <h1>ART PLEB</h1>
-        <h2>jpg maximalist</h2>
-    </header>
-    
-    <main>
-        <div class="artistLabel" id="artistLabel">Artist</div>
+        <!-- Header Section -->
+        <header>
+            <h1>ART PLEB</h1>
+            <h2>jpg maximalist</h2>
+        </header>
 
-        <div id="mediaContainer">
-            <!-- Content will be injected here by JavaScript -->
-        </div>
-        <div class="titleLabel" id="titleLabel">Title</div>
+        <main>
+            <div class="artistLabel" id="artistLabel">Artist</div>
 
-    </main>
-        
-    
-    <!-- Footer Section -->
-    <footer>
-        <ftext>
-            <a href="/index.html" class="retro-effect">Home</a>
-            <a class="retro-effect" onclick="toggleTheme()">Lights</a>
-            <a href="https://deca.art/art_pleb/galleries" target="_blank" class="retro-effect">Galleries</a>
-            <a href="/about.html" class="retro-effect">About</a>
-            <a href="mailto:artpleb@21galleries.co" class="retro-effect">Contact</a>
-            <a href="https://www.x.com/art_pleb" target="_blank" class="retro-effect" >X</a>
-        </ftext>
-    </footer>
 
-    <script src="scripts.js"></script>
+            <div id="mediaContainer">
+                <!-- Content will be injected here by JavaScript -->
+            </div>
+
+            <div class="titleLabel" id="titleLabel">Title</div>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <ftext>
+                <a href="/index.html" class="retro-effect">Home</a>
+                <a class="retro-effect" onclick="toggleTheme()">Lights</a>
+                <a href="https://deca.art/art_pleb/galleries" target="_blank" class="retro-effect">Galleries</a>
+                <a href="/about.html" class="retro-effect">About</a>
+                <a href="mailto:artpleb@21galleries.co" class="retro-effect">Contact</a>
+                <a href="https://www.x.com/art_pleb" target="_blank" class="retro-effect" >X</a>
+            </ftext>
+        </footer>
+
+        <script src="scripts.js"></script>
 
     </wrapper>
 </body>

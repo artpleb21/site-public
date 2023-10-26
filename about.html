@@ -1,65 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles-about.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Pleb - JPG Maximalist</title>
+    <title>Art Pleb</title>
+    <script>
+        function loadStylesheet() {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = window.innerWidth <= 800 ? "mobile-styles.css" : "styles.css";
+            document.head.appendChild(link);
+        }
+    </script>
     <style>
-
-
-        .header {
-            text-align: left;
-            margin-left: 0px; /* This can be adjusted based on your preference */
-            border-bottom: 1px solid #EAEAEA;
-
-        }
-        
-        /* Existing Styles */
-
-        a {
-            color: #66FCF1;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .section {
-            margin-bottom: 10px;
-            padding: 10px 0;
-        }
 
 
     </style>
 </head>
-<body>
-    <div class="wrapper">
-        <!-- Header Section -->
-        <div class="section header">
-            <h1><b href="/site-public/home.html">ART PLEB</b></h1>
-            <h2>jpg maximalist</h2>
-        </div>
+<body onload="loadStylesheet()">
+    <wrapper>
+    <header>
+        <h1>ART PLEB</h1>
+        <h2>jpg maximalist</h2>
+    </header>
         
         <!-- Middle Section -->
-        <div class="container">
+        <mainAbout>
             <img src="https://arweave.net/UcK7KAhzS54Iqzo0xWfDCwZyhy6C_knkeBiX8tlKxsE" alt="GM Matt">
-            <p> Arthur Plebani (Art Pleb) is a cryptography brother who buys jpg and png files on the internet.  His passions include messing with computers until they no longer work, all kinds of boats and watercraft, Flamenco guitar, and Pina Coladas. </p>
+            <p class="aboutText"> Arthur Plebani (Art Pleb) is a cryptography brother who buys jpg and png files on the internet.  His passions include messing with computers until they no longer work, all kinds of boats and watercraft, Flamenco guitar, and Pina Coladas. </p>
 
-        </div>
+        </mainAbout>
         
         <!-- Footer Section -->
-        <div class="section footer">
+    <!-- Footer Section -->
+    <footer>
+        <ftext>
             <a href="/index.html" class="retro-effect">Home</a>
-            <a href="https://deca.art/art_pleb/galleries" class="retro-effect" target="_blank">Galleries</a>
+            <a class="retro-effect" onclick="toggleTheme()">Lights</a>
+            <a href="https://deca.art/art_pleb/galleries" target="_blank" class="retro-effect">Galleries</a>
             <a href="/about.html" class="retro-effect">About</a>
             <a href="mailto:artpleb@21galleries.co" class="retro-effect">Contact</a>
-            <a href="https://www.x.com/art_pleb" class="retro-effect" target="_blank">X</a>
-
-        </div>
-    </div>
-                <script src="scripts.js"></script>
-
+            <a href="https://www.x.com/art_pleb" target="_blank" class="retro-effect" >X</a>
+        </ftext>
+    </footer>
+    <script src="scripts.js"></script>
+</wrapper>
 </body>
 </html>
