@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { url: 'https://ipfs.pixura.io/ipfs/QmcphmXxXLFMWNKmmXfcJwkv7bkTFToeGvwe4qWKpe2GeU/elpis.jpg', title: 'elpis', artist: 'eniosta', type: 'image' },
     { url: 'https://ipfs.pixura.io/ipfs/QmXdJ4dsXZAL24JpXd4aSMkYyBWukSDvRMFv6eq8Vd2XcV/GOLDENRATIO_FULL-ARTWORK.jpg', title: 'Golden Ratio', artist: 'Jenni Pasanen', type: 'image' },
     { url: 'https://ipfs.pixura.io/ipfs/QmNuAuViN4fRAATvrJcovqxPHTmjXpR5EpkoopPAhTPNNc/DontLeaveMe.jpg', title: 'Lost In The City Lights', artist: 'Louis Dazy', type: 'image' },
-    { url: 'https://ipfs.pixura.io/ipfs/QmeauZXrTiucciSLenuW2jWsrX5KwmbNQ97deBb7CsFjpq/app3.jpg', title: 'MEMORA.', artist: 'Israel Riqueros', type: 'image' },
+    { url: 'https://ipfs.pixura.io/ipfs/QmeauZXrTiucciSLenuW2jWsrX5KwmbNQ97deBb7CsFjpq/app3.jpg', title: 'MEMORA', artist: 'Israel Riqueros', type: 'image' },
     { url: 'https://ipfs.pixura.io/ipfs/QmRreVnDi9LBUDZcvDinwaX82ipPXFVmJgtf38pryxfqRv/afterthepaletheworldagain.jpg', title: 'After The Pale, The World Again', artist: 'Mia Novakova', type: 'image' },
     { url: 'https://ipfs.pixura.io/ipfs/QmQTEfhNA8Y3UGsCB81zHuxwEnJ41ZYT1YWtNvnmvyXjwd/YDBMF1a.jpg', title: 'Honey Hibiscus', artist: 'Erin McGean', type: 'image' },
     { url: 'https://ipfs.pixura.io/ipfs/QmVJYw27vCJM3WM8YZKRZwUpHLp2BnLnUMtDD2G5P74ch1/sample.png', title: 'On a Clear Day You Can See Forever', artist: 'Almond', type: 'image' },
