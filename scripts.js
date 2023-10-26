@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const videoElement = document.createElement('video');
         videoElement.src = selectedItem.url;
         videoElement.controls = true;
+        videoElement.autoplay = true;  // Add this line to enable autoplay
+        videoElement.muted = true;     // Mute the video to ensure autoplay works in most browsers
+
         mediaContainer.appendChild(videoElement);
     } else if (selectedItem.type === 'image') {
         const imgElement = document.createElement('img');
